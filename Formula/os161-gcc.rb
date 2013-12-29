@@ -2,8 +2,8 @@ require 'formula'
 
 class Os161Gcc < Formula
   homepage ''
-  url 'http://www.cse.unsw.edu.au/~cs3231/10s1/os161/files/gcc-4.1.2+os161-2.0.tar.gz'
-  md5 '93bc11b1c346c6ad360758380af08e60'
+  url 'http://www.eecs.harvard.edu/~dholland/os161/download/gcc-4.1.2+os161-2.0.tar.gz'
+  sha1 '5229851ab8edddd096887f31011a326f006aa295c34ad3861a742499d0acc782'
 
   # Dont strip compilers.
   skip_clean :all
