@@ -1,9 +1,9 @@
 require 'formula'
 
 class Sys161 < Formula
-  url 'http://www.cse.unsw.edu.au/~cs3231/10s1/os161/files/sys161-1.99.04.tar.gz'
-  version '1.99.04'
-  md5 'e7f72e6f53c018ef7b7ca81a5efbcf50'
+  url 'http://www.eecs.harvard.edu/~dholland/os161/download/sys161-1.99.06.tar.gz'
+  version '1.99.06'
+  sha1 '7cacbadbccb183ce4ca405e73e91d374e00e92fd0606b57617840b381fff37be'
   
   depends_on "os161-binutils"
   depends_on "os161-gcc"
