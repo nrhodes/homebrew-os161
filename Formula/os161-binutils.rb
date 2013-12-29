@@ -2,8 +2,8 @@ require 'formula'
 
 class Os161Binutils < Formula
   homepage ''
-  url 'http://www.cse.unsw.edu.au/~cs3231/10s1/os161/files/binutils-2.17+os161-2.0.tar.gz'
-  md5 '91ae34114974be9641d4c7371a23b0b5'
+  url 'http://www.eecs.harvard.edu/~dholland/os161/download/binutils-2.17+os161-2.0.1.tar.gz'
+  sha256 '895c0648e40c6ff5d7fc9a8ee9bcad2fe1589cbdfbf5e005baceb8b9b8b8b916'
 
   def install
     ENV.delete 'CFLAGS'
