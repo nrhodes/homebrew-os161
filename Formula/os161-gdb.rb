@@ -2,9 +2,8 @@ require 'formula'
 
 class Os161Gdb < Formula
   homepage ''
-  url 'http://www.eecs.harvard.edu/~dholland/os161/download/os161-base-1.99.05.tar.gz'
-  version '1.99.05'
-  md5 'd7096802158f8a33de53a0fd4cc3e24cd4fe4b815a1b64958d89fe0addd049fd'
+  url 'http://www.eecs.harvard.edu/~dholland/os161/download/gdb-6.6+os161-2.0.tar.gz'
+  sha256 '4ee60a23192b15f7f51b8357a05e2400800e39c4ae9d43f44ca922d05c15b50c'
 
   def install
     ENV["CFLAGS"] = "-Os -w -pipe -std=gnu89"
