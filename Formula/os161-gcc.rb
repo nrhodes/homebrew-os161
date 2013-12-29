@@ -5,9 +5,6 @@ class Os161Gcc < Formula
   url 'http://www.eecs.harvard.edu/~dholland/os161/download/gcc-4.1.2+os161-2.0.tar.gz'
   sha256 '5229851ab8edddd096887f31011a326f006aa295c34ad3861a742499d0acc782'
 
-  # Dont strip compilers.
-  skip_clean :all
-  
   depends_on 'os161-binutils'
 
   def install
@@ -28,6 +25,7 @@ class Os161Gcc < Formula
             "--nfp", "--disable-shared", "--disable-werror", "--disable-threads",                         
             "--disable-libmudflap",
             "--disable-libssp",
+            "--disable-install-libiberty",
             "--target=mips-harvard-os161",
             "--prefix=#{prefix}",
 #            "--datarootdir=#{share}",
