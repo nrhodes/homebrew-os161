@@ -8,7 +8,10 @@ class Os161Gdb < Formula
   def install
     ENV["CFLAGS"] = "-Os -w -pipe -std=gnu89"
     ENV["CXXFLAGS"] = "-Os -w -pipe"
-    
+    args = [
+            "--disable-install-libiberty",
+    ]
+ 
     system "./configure", "--target=mips-harvard-os161", "--disable-werror", "--prefix=#{prefix}"
     
     system "make"
