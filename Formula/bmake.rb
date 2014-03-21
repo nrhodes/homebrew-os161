@@ -13,7 +13,8 @@ class Bmake < Formula
   end
   
   def install
-    resource("mk").stage { System echo }
+    d = Dir.pwd
+    resource("mk").stage { mkdir "#{d}/mk"; cp Dir['*'], "#{d}/mk/" }
     system "./configure", "--prefix=#{prefix}"
 
     system "make -f makefile.boot"
