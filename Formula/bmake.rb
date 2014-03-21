@@ -18,6 +18,6 @@ class Bmake < Formula
     system "./configure", "--prefix=#{prefix}"
     system "sh", "make-bootstrap.sh"
     
-    cp "bmake", "#{bin}"
+    (bin).install "bmake"
   end
 end
