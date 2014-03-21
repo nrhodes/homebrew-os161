@@ -8,7 +8,7 @@ class Sys161 < Formula
   depends_on "os161-binutils"
   depends_on "os161-gcc"
   depends_on "os161-gdb"
-  depends_on "bmake"
+  #depends_on "bmake"
   
   def install
     system "./configure", "--prefix=#{prefix}", "mipseb"
