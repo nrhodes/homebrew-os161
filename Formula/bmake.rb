@@ -19,6 +19,6 @@ class Bmake < Formula
     system "sh", "make-bootstrap.sh"
     
     (bin).install "bmake"
-    (share/'mk').install "mk"
+    (share).install "mk"
   end
 end
