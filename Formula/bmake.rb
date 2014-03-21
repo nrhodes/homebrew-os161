@@ -12,7 +12,7 @@ class Bmake < Formula
   version '1'
 
   def install
-    resource('mk').stage { System echo }
+    resource("mk").stage { System echo }
     system "./configure", "--prefix=#{prefix}"
 
     system "make -f makefile.boot"
