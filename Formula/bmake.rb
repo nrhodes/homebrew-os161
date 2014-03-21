@@ -1,10 +1,8 @@
 require 'formula'
 
-class BmakeMK < Formula
+resource 'mk' do
   url 'http://www.eecs.harvard.edu/~dholland/os161/download/mk-20100612.tar.gz'
-  version '1'
   sha256 '37abd0c420f9caec56af27909b8cdda7e81fd4c4eac6a15e4583511693050e7b'
-  
 end
 
 class Bmake < Formula
@@ -14,7 +12,8 @@ class Bmake < Formula
   version '1'
 
   def install
-    #d = Dir.pwd
+    d = Dir.pwd
+    resource('mk').stage { mv ../mk d}
     #BmakeMK.new.brew { mkdir "#{d}/mk"; cp Dir['*'], "#{d}/mk/" }
     system "./configure", "--prefix=#{prefix}"
 
