@@ -13,7 +13,7 @@ class Bmake < Formula
 
   def install
     d = Dir.pwd
-    resource('mk').stage { mv ../mk d }
+    resource('mk').stage { }
     system "./configure", "--prefix=#{prefix}"
 
     system "make -f makefile.boot"
