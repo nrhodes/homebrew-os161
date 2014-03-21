@@ -17,6 +17,6 @@ class Bmake < Formula
     resource("mk").stage { mkdir "#{d}/mk"; cp_r Dir['*'], "#{d}/mk/" }
     system "./boot-strap", "--prefix=#{prefix}"
     
-    cp /tmp/bmake/Darwin/bmake "#{prefix}"
+    cp "Darwin/bmake", "#{prefix}"
   end
 end
