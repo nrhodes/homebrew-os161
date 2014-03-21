@@ -15,8 +15,9 @@ class Bmake < Formula
   def install
     d = Dir.pwd
     resource("mk").stage { mkdir "#{d}/mk"; cp_r Dir['*'], "#{d}/mk/" }
-    system "./boot-strap", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}"
+    system "sh", "make-bootstrap.sh"
     
-    cp "Darwin/bmake", "#{prefix}"
+    cp "bmake", "#{prefix}"
   end
 end
