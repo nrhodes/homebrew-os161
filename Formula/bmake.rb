@@ -13,8 +13,7 @@ class Bmake < Formula
 
   def install
     d = Dir.pwd
-    resource('mk').stage { mv ../mk d}
-    #BmakeMK.new.brew { mkdir "#{d}/mk"; cp Dir['*'], "#{d}/mk/" }
+    resource('mk').stage { mv ../mk d }
     system "./configure", "--prefix=#{prefix}"
 
     system "make -f makefile.boot"
